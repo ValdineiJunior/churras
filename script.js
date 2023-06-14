@@ -2,10 +2,10 @@ document.getElementById('calculatorForm').addEventListener('submit', function(ev
     event.preventDefault();
 
     // Obter os valores selecionados
-    var eventType = document.getElementById('eventType').value;
-    var guestProfile = document.getElementById('guestProfile').value;
-    var sides = document.getElementById('sides').value;
-    var numberOfGuests = document.getElementById('numberOfGuests').value;
+    var eventType = document.querySelector('input[name="eventType"]:checked').value;
+    var guestProfile = document.querySelector('input[name="guestProfile"]:checked').value;
+    var sides = document.querySelector('input[name="sides"]:checked').value;
+    var numberOfGuests = parseInt(document.getElementById('numberOfGuests').value);
 
     // Calcular a quantidade de carne por pessoa
     var meatPerGuest = calculateMeatPerGuest(eventType, guestProfile, sides);
@@ -24,11 +24,11 @@ function calculateMeatPerGuest(eventType, guestProfile, sides) {
     var baseAmount = 0.3;
 
     if (eventType === 'lunch') {
-        baseAmount += 0.1
+        baseAmount += 0.1;
     }
     
     if (eventType === 'unending') {
-        baseAmount += 0.2
+        baseAmount += 0.2;
     }
 
     if (guestProfile === 'adults') {
