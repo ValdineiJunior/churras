@@ -1,6 +1,13 @@
+document.addEventListener('DOMContentLoaded', function() {
+    calculateAndDisplayResult();
+});
+
 document.getElementById('calculatorForm').addEventListener('submit', function(event) {
     event.preventDefault();
+    calculateAndDisplayResult();
+});
 
+function calculateAndDisplayResult() {
     // Obter os valores selecionados
     var eventType = document.querySelector('input[name="eventType"]:checked').value;
     var guestProfile = document.querySelector('input[name="guestProfile"]:checked').value;
@@ -18,7 +25,7 @@ document.getElementById('calculatorForm').addEventListener('submit', function(ev
     document.getElementById('resultTotal').textContent = 'Quantidade total: ' + totalMeat.toFixed(3) + ' kg';
 
     document.getElementById('result').style.display = 'block';
-});
+}
 
 function calculateMeatPerGuest(eventType, guestProfile, sides) {
     var baseAmount = 0.3;

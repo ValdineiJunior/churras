@@ -6,33 +6,20 @@ body {
       #ffff66 21%,
       #b8e1ff
     );
-    background-repeat: no-repeat;
-    background-color: #b8e1ff;
-}
-
-html {
-  height: 100%;
+  background-repeat: no-repeat;
+  background-color: #b8e1ff;
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
   margin: 0;
-  overflow: auto;
 }
 
-h1 {
-  text-align: center;
-}
-
-form {
+h1, h2, p, form {
   text-align: center;
 }
 
 button {
-  padding: 5px 20px;
-  margin: 5px;
-}
-
-#result {
-  padding-bottom: 1%;
-}
-
-#result h2,p {
-  text-align: center;
+  padding: 1px 20px;
 }

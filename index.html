@@ -4,6 +4,9 @@
 <head>
     <title>Calculadora do Churrasco</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,40 +19,38 @@
             <div>
                 <h2><label for="eventType">Tipo de Evento:</label></h2>
                 <input type="radio" id="eventType" name="eventType" value="tasting" checked>
-                <label for="eventType">Degustação - Tempo rápido até umas 3 horas</label>
+                <label for="eventType">Degustação - Tempo rápido até umas 3 horas.</label>
                 <br>
                 <input type="radio" id="eventType" name="eventType" value="lunch">
-                <label for="eventType">Almoço ou Jantar de fim de semana - Tempo médio de 3 à 5:00h</label>
+                <label for="eventType">Almoço ou Jantar de fim de semana - Tempo médio de 3 à 5:00h.</label>
                 <br>
                 <input type="radio" id="eventType" name="eventType" value="unending">
-                <label for="eventType">Evento mais demorado - Sem hora certa pra acabar</label>
+                <label for="eventType">Evento mais demorado - Sem hora certa pra acabar.</label>
                 <br>
             </div>
             <div>
                 <h2><label for="guestProfile">Perfil dos Convidados:</label></h2>
                 <input type="radio" id="guestProfile" name="guestProfile" value="family" checked>
-                <label for="guestProfile">Família em geral incluindo crianças</label>
+                <label for="guestProfile">Família em geral incluindo crianças.</label>
                 <br>
                 <input type="radio" id="guestProfile" name="guestProfile" value="adults">
-                <label for="guestProfile">Somente adultos que comem bem</label>
+                <label for="guestProfile">Somente adultos que comem bem.</label>
                 <br>
             </div>
             <div>
                 <h2><label for="sides">Acompanhamentos:</label></h2>
                 <input type="radio" id="sides" name="sides" value="snacks" checked>
-                <label for="sides">Servido com alguns petiscos, basicamente só o churrasco mesmo</label>
+                <label for="sides">Servido somente com algum petisco e ou uma farofa.</label>
                 <br>
                 <input type="radio" id="sides" name="sides" value="sideDishes">
-                <label for="sides">Servido junto a uma refeição mais elaborada como maionese, arroz, salada, vinagrete,
-                    pão.</label>
+                <label for="sides">Servido junto a uma refeição mais elaborada como maionese, arroz e salada.</label>
                 <br>
             </div>
             <div>
                 <h2><label for="numberOfGuests">Número de Convidados:</label></h2>
                 <input type="number" id="numberOfGuests" min="1" value="1">
-                <br>
+                <button type="submit">Calcular</button>
             </div>
-            <button type="submit">Calcular</button>
         </form>
     </main>
 
