@@ -1,48 +1,42 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
     calculateAndDisplayResult();
 });
 
-document.getElementById('calculatorForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    calculateAndDisplayResult();
+const inputs = document.querySelectorAll("#calculatorForm input");
+
+inputs.forEach(input => {
+    input.addEventListener("change", function () {
+        calculateAndDisplayResult();
+    });
 });
 
 function calculateAndDisplayResult() {
-    // Obter os valores selecionados
-    var eventType = document.querySelector('input[name="eventType"]:checked').value;
-    var guestProfile = document.querySelector('input[name="guestProfile"]:checked').value;
-    var sides = document.querySelector('input[name="sides"]:checked').value;
-    var numberOfGuests = parseInt(document.getElementById('numberOfGuests').value);
-
-    // Calcular a quantidade de carne por pessoa
-    var meatPerGuest = calculateMeatPerGuest(eventType, guestProfile, sides);
-
-    // Calcular a quantidade total de carne
-    var totalMeat = meatPerGuest * numberOfGuests;
-
-    // Exibir os resultados
-    document.getElementById('resultPerGuest').textContent = 'Quantidade por pessoa: ' + meatPerGuest.toFixed(3) + ' kg';
-    document.getElementById('resultTotal').textContent = 'Quantidade total: ' + totalMeat.toFixed(3) + ' kg';
-
-    document.getElementById('result').style.display = 'block';
+    const eventType = document.querySelector("input[name='eventType']:checked").value;
+    const guestProfile = document.querySelector("input[name='guestProfile']:checked").value;
+    const sides = document.querySelector("input[name='sides']:checked").value;
+    const numberOfGuests = parseInt(document.getElementById("numberOfGuests").value);
+    const meatPerGuest = calculateMeatPerGuest(eventType, guestProfile, sides);
+    const totalMeat = meatPerGuest * numberOfGuests;
+    document.getElementById("resultPerGuest").textContent = "Quantidade por pessoa: " + meatPerGuest.toFixed(3) + " kg";
+    document.getElementById("resultTotal").textContent = "Quantidade total: " + totalMeat.toFixed(3) + " kg";
 }
 
 function calculateMeatPerGuest(eventType, guestProfile, sides) {
-    var baseAmount = 0.3;
+    let baseAmount = 0.3;
 
-    if (eventType === 'lunch') {
+    if (eventType === "lunch") {
         baseAmount += 0.1;
     }
-    
-    if (eventType === 'unending') {
+
+    if (eventType === "unending") {
         baseAmount += 0.2;
     }
 
-    if (guestProfile === 'adults') {
+    if (guestProfile === "adults") {
         baseAmount += 0.1;
     }
 
-    if (sides === 'snacks') {
+    if (sides === "snacks") {
         baseAmount += 0.1;
     }
 

@@ -1,70 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Calculadora do Churrasco</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Calculadora do Churrasco</title>
 </head>
 
 <body>
     <header>
         <h1>Calculadora do Churrasco</h1>
     </header>
-
     <main>
         <form id="calculatorForm">
             <div>
                 <h2><label for="eventType">Tipo de Evento:</label></h2>
-                <input type="radio" id="eventType" name="eventType" value="tasting" checked>
-                <label for="eventType">Degustação - Tempo rápido até umas 3 horas.</label>
+                <label for="tasting"><input type="radio" id="tasting" name="eventType" value="tasting"
+                        checked>Degustação - Tempo rápido até umas 3 horas.</label>
                 <br>
-                <input type="radio" id="eventType" name="eventType" value="lunch">
-                <label for="eventType">Almoço ou Jantar de fim de semana - Tempo médio de 3 à 5:00h.</label>
+                <label for="lunch"><input type="radio" id="lunch" name="eventType" value="lunch">Almoço ou Jantar de fim
+                    de semana - Tempo médio de 3 à 5:00h.</label>
                 <br>
-                <input type="radio" id="eventType" name="eventType" value="unending">
-                <label for="eventType">Evento mais demorado - Sem hora certa pra acabar.</label>
+                <label for="unending"><input type="radio" id="unending" name="eventType" value="unending">Evento mais
+                    demorado - Sem hora certa pra acabar.</label>
                 <br>
             </div>
             <div>
                 <h2><label for="guestProfile">Perfil dos Convidados:</label></h2>
-                <input type="radio" id="guestProfile" name="guestProfile" value="family" checked>
-                <label for="guestProfile">Família em geral incluindo crianças.</label>
+
+                <label for="family"><input type="radio" id="family" name="guestProfile" value="family" checked>Família
+                    em geral incluindo crianças.</label>
                 <br>
-                <input type="radio" id="guestProfile" name="guestProfile" value="adults">
-                <label for="guestProfile">Somente adultos que comem bem.</label>
+                <label for="adults"><input type="radio" id="adults" name="guestProfile" value="adults">Somente adultos
+                    que comem bem.</label>
                 <br>
             </div>
             <div>
                 <h2><label for="sides">Acompanhamentos:</label></h2>
-                <input type="radio" id="sides" name="sides" value="snacks" checked>
-                <label for="sides">Servido somente com algum petisco e ou uma farofa.</label>
+                <label for="snacks"><input type="radio" id="snacks" name="sides" value="snacks" checked>Servido somente
+                    com algum petisco e ou uma farofa.</label>
                 <br>
-                <input type="radio" id="sides" name="sides" value="sideDishes">
-                <label for="sides">Servido junto a uma refeição mais elaborada como maionese, arroz e salada.</label>
+                <label for="sideDishes"><input type="radio" id="sideDishes" name="sides" value="sideDishes">Servido
+                    junto a uma refeição mais elaborada como maionese, arroz e salada.</label>
                 <br>
             </div>
             <div>
                 <h2><label for="numberOfGuests">Número de Convidados:</label></h2>
                 <input type="number" id="numberOfGuests" min="1" value="1">
-                <button type="submit">Calcular</button>
             </div>
         </form>
+        <div id="result">
+            <h2>Quantidade de Carne:</h2>
+            <p id="resultPerGuest"></p>
+            <p id="resultTotal"></p>
+        </div>
     </main>
-
-    <footer>
-        <!-- Conteúdo do footer, como informações de contato, links adicionais, etc. -->
-    </footer>
-
-
-    <div id="result" style="display: none;">
-        <h2>Quantidade de Carne:</h2>
-        <p id="resultPerGuest"></p>
-        <p id="resultTotal"></p>
-    </div>
-
     <script src="script.js"></script>
 </body>
 
