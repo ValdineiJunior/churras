@@ -1,36 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Calculadora do Churrasco</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-    <h1>Calculadora do Churrasco</h1>
-    <form id="calculatorForm">
-        <label for="eventType">Tipo de Evento:</label>
-        <select id="eventType">
-            <option value="tasting">Degustação - Tempo rapido até umas 3 horas</option>
-            <option value="lunch">Almoço ou Jantar de fim de semana - Tempo médio de 3 à 5:00h</option>
-            <option value="unending">Evento mais demorado - Sem hora certa pra acabar</option>
-        </select>
-        
-        <label for="guestProfile">Perfil dos Convidados:</label>
-        <select id="guestProfile">
-            <option value="family">Familia em geral incluindo criançãs</option>
-            <option value="adults">Somente adultos que comem bem</option>
-        </select>
-        
-        <label for="sides">Acompanhamentos:</label>
-        <select id="sides">
-            <option value="snacks">Servido com alguns petiscos, basicamente só o churrasco mesmo</option>
-            <option value="sideDishes">Servido junto a uma refeição mais elaborada como maionese, arroz, salada, vinagrete, pão. </option>
-        </select>
-        
-        <label for="numberOfGuests">Número de Convidados:</label>
-        <input type="number" id="numberOfGuests" min="1">
-        
-        <button type="submit">Calcular</button>
-    </form>
+    <header>
+        <h1>Calculadora do Churrasco</h1>
+    </header>
+
+    <main>
+        <form id="calculatorForm">
+            <div>
+                <h2><label for="eventType">Tipo de Evento:</label></h2>
+                <input type="radio" id="eventType" name="eventType" value="tasting" checked>
+                <label for="eventType">Degustação - Tempo rápido até umas 3 horas</label>
+                <br>
+                <input type="radio" id="eventType" name="eventType" value="lunch">
+                <label for="eventType">Almoço ou Jantar de fim de semana - Tempo médio de 3 à 5:00h</label>
+                <br>
+                <input type="radio" id="eventType" name="eventType" value="unending">
+                <label for="eventType">Evento mais demorado - Sem hora certa pra acabar</label>
+                <br>
+            </div>
+            <div>
+                <h2><label for="guestProfile">Perfil dos Convidados:</label></h2>
+                <input type="radio" id="guestProfile" name="guestProfile" value="family" checked>
+                <label for="guestProfile">Família em geral incluindo crianças</label>
+                <br>
+                <input type="radio" id="guestProfile" name="guestProfile" value="adults">
+                <label for="guestProfile">Somente adultos que comem bem</label>
+                <br>
+            </div>
+            <div>
+                <h2><label for="sides">Acompanhamentos:</label></h2>
+                <input type="radio" id="sides" name="sides" value="snacks" checked>
+                <label for="sides">Servido com alguns petiscos, basicamente só o churrasco mesmo</label>
+                <br>
+                <input type="radio" id="sides" name="sides" value="sideDishes">
+                <label for="sides">Servido junto a uma refeição mais elaborada como maionese, arroz, salada, vinagrete,
+                    pão.</label>
+                <br>
+            </div>
+            <div>
+                <h2><label for="numberOfGuests">Número de Convidados:</label></h2>
+                <input type="number" id="numberOfGuests" min="1" value="1">
+                <br>
+            </div>
+            <button type="submit">Calcular</button>
+        </form>
+    </main>
+
+    <footer>
+        <!-- Conteúdo do footer, como informações de contato, links adicionais, etc. -->
+    </footer>
+
 
     <div id="result" style="display: none;">
         <h2>Quantidade de Carne:</h2>
@@ -40,4 +66,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
